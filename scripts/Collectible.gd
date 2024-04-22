@@ -10,3 +10,6 @@ func _ready():
 
 func pick_up():
 	self.num_collectible += 1
+	
+func reset_collectible():
+	self.num_collectible = 0
