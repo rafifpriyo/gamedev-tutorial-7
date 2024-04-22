@@ -22,6 +22,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0218134, 0.951608, -0.01820
 [node name="RayCast" type="RayCast" parent="Head"]
 enabled = true
 cast_to = Vector3( 0, 0, -5 )
+debug_shape_custom_color = Color( 0.878431, 0, 0, 1 )
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]

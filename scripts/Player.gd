@@ -8,6 +8,7 @@ export var mouse_sensitivity = 0.3
 
 onready var head = $Head
 onready var camera = $Head/Camera
+onready var raycast = $Head/RayCast
 
 var velocity = Vector3()
 var camera_x_rotation = 0
@@ -22,6 +23,7 @@ func _input(event):
 		var x_delta = event.relative.y * mouse_sensitivity
 		if camera_x_rotation + x_delta > -90 and camera_x_rotation + x_delta < 90:
 			camera.rotate_x(deg2rad(-x_delta))
+			raycast.rotate_x(deg2rad(-x_delta))
 			camera_x_rotation += x_delta
 
 func _process(delta):
