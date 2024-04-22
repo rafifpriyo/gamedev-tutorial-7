@@ -42,8 +42,14 @@ func _physics_process(delta):
 		movement_vector += head_basis.x
 
 	movement_vector = movement_vector.normalized()
+	
+	var multiplier = 1
+	if Input.is_action_pressed("sprint"):
+		multiplier = 1.1
+	elif Input.is_action_pressed("crouch"):
+		multiplier = 0.8
 
-	velocity = velocity.linear_interpolate(movement_vector * speed, acceleration * delta)
+	velocity = velocity.linear_interpolate(movement_vector * speed, acceleration * delta) * multiplier
 	velocity.y -= gravity
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
