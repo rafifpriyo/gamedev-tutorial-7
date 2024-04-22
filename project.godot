@@ -24,6 +24,10 @@ config/name="Basic 3D Game Mechanics"
 run/main_scene="res://Scenes/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Collectible="*res://scripts/Collectible.gd"
+
 [input]
 
 movement_forward={
